@@ -363,6 +363,11 @@ footer {
 
 .logosfooter {
   font-size: 30px;
+  transition:ease-out 1s;
+}
+
+.logosfooter:hover{
+  transform: scale(2,2);
 }
 
 @media screen and (max-width: 900px) {
