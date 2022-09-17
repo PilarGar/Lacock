@@ -552,5 +552,6 @@ footer {
 @media screen and (max-width: 576px){
   .cards{
     align-items: center;
+    margin: auto;
   }
 }
