@@ -1,0 +1,253 @@
+/*INDEX*/
+main{
+    h2{
+        font-family: $titulo;
+        text-shadow: 1px 1px 1px gray;
+    }
+    p{
+        font-family: $parrafo;
+    }
+    .verflyer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        .verflyerinside{
+            position: relative;
+            height: 85%;
+            width: 85%;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0px 1px 10px ;
+            &:hover>.capa{
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover>.capa a{
+                color: white;
+                font-weight: 500;
+                transition: all 500ms ease-out;
+                font-family: 'Oswald', sans-serif;
+                font-size: 30px;
+                text-shadow: 1px 1px 1px gray;
+            }
+            img{
+                width: 98%;
+                height: 96%;
+                transition: all 500ms ease-out;
+            }
+            .capa{
+                position: absolute;
+                top: 0;
+                width: 98%;
+                height: 96%;
+                background-color: rgb(213, 193, 175);
+                transition: all 500ms ease-out;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .cards{
+        margin: 35px;
+        h2{
+            font-family: $titulo;
+            text-align: center;
+            text-shadow: $tituloshadow;
+        }
+        p{
+            font-family: $parrafo;
+        }
+        .nuevo-ingreso-card {
+            margin: 15px 15px;
+            width: 250px;
+            height: 350px;
+            display: inline-block;
+            text-align: center;
+            border: $bordercard;
+            border-radius: 5px;
+            box-shadow: 0px 1px 10px ;
+            text-shadow: 0px 1px 10px;
+            img{
+                text-align: center;
+                height: 70%;
+                width: 90%;
+                box-shadow: 0px 1px 5px ;
+                border-radius: 6px;
+                &:hover{
+                    border: $borderimg;
+                    border-radius: 6px;
+                    transition: all 200ms ease-in-out;
+                }
+            }
+          }
+    }
+}
+
+/*PRODUCTOS*/
+main{
+    .cards{
+        margin: 35px;
+        .product{
+            margin: 15px;
+            width: 250px;
+            height: 350px;
+            display: inline-block;
+            text-align: center;
+            border: $bordercard;
+            border-radius: 5px;
+            box-shadow: 0px 1px 10px;
+            text-shadow: 0px 1px 5px ;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: black;
+                img{
+                margin: 10px 0px 0px 0px;
+                text-align: center;
+                height: 70%;
+                width: 90%;
+                box-shadow: 0px 1px 5px ;
+                border-radius: 6px;
+                    &:hover{
+                        border: $borderimg;
+                        border-radius: 6px;
+                        transition: all 200ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*AROS-GORROS-COLLARES-PULSERAS*/
+main{
+    .cards{
+        margin: 35px;
+        .productos{
+            margin: 15px;
+            width: 250px;
+            height: 350px;
+            display: inline-block;
+            text-align: center;
+            border: $bordercard;
+            border-radius: 5px;
+            box-shadow: 0px 1px 10px;
+            text-shadow: 0px 1px 5px ;
+            img{
+                text-align: center;
+                height: 70%;
+                width: 90%;
+                box-shadow: 0px 1px 5px ;
+                border-radius: 6px;
+                &:hover{
+                border: $borderimg;
+                border-radius: 6px;
+                transition: all 200ms ease-in-out;
+            }
+            }
+        }
+    }
+}
+
+/*FORM*/
+main{
+    .formcrearcuenta{
+        margin-left: 20%;
+        align-items: center;
+            form{
+                .fieldcampo {
+                    width: 70%;
+                    height: 80%;
+                    border: solid rgb(213, 193, 175) 2px;
+                    border-radius: 5px;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                }  
+                .label {
+                    font-family: $parrafo;
+                    height: 5px;
+                    display: flex;
+                    justify-content: flex-start;
+                }  
+                .boton {
+                    background-color: rgb(213, 193, 175);
+                    border: solid rgb(202, 176, 153) 2px;
+                    border-radius: 5px;
+                    width: 25%;
+                    height: 25%;
+                    margin-top: 50px;
+                    margin-left: 25%;
+                    display: flex;
+                    justify-content: center;
+                    &:hover{
+                        text-shadow: 1px 1px 1px gray;
+                        box-shadow: 1px 1px 1px rgb(176, 175, 175);
+                    }
+            }
+          }
+    }
+}
+
+/*INICIAR SESION*/ 
+main{
+    .acceder{
+        text-align: center;
+        p{
+            a{
+                text-decoration: none;
+                color: rgb(213, 193, 175);
+                text-shadow: 0.5px 0.5px 0.5px rgb(177, 150, 125);;
+            }
+        }
+    }
+}
+
+/*NOSOTROS*/
+main{
+    .nosotros{
+        background-color: rgb(213, 193, 175);
+        font-size: medium;
+        display: grid;
+        grid-template-areas:
+         "titulo titulo"
+         "imgnosotras nosotrasletter";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 500px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        align-items: center;
+        justify-items: center;
+        .titulo{
+            grid-area: titulo;
+            font-family: $titulo;
+        }
+        .nosotrasletter {
+            grid-area: nosotrasletter;
+            font-family: "Oswald";
+            font-size: medium;
+            text-align: center;
+            height: 40%;
+            width: 80%;
+        }
+        .imgnosotras {
+            grid-area: imgnosotras;
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
+
+main{
+    .preguntas{
+        font-family: $parrafo;
+        line-height: normal;
+    }
+}

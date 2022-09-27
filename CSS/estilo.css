@@ -1,549 +1,414 @@
+/* VARIABLES*/
 * {
   margin: 10px;
   padding: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-  background-color: rgb(244, 233, 224);
-}
-
-.img {
-  width: 200px;
-  height: 250px;
-}
-
-h2 {
-  font-family: 'Satisfy', cursive;
-  text-align: center;
-  text-shadow: 0px 1px 5px rgb(0, 0, 0, 0.30);
-}
-
-p {
-  font-family: 'Oswald', sans-serif;
-}
+  background-color: #f5eae0; }
 
 /*CONTENEDOR GRID*/
 .contenedor {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 25% 50% 25%;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
+  grid-template-areas: "header" "main" "footer"; }
 
 main {
   grid-area: main;
   align-items: center;
   text-align: center;
-  padding: 10px;
-}
+  padding: 10px; }
 
 footer {
   grid-area: footer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: max-content;
-}
+  height: max-content; }
 
 header {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto auto;
-  grid-template-areas:
-    "center nav";
+  grid-template-areas: "center nav";
   justify-content: space-between;
-  background-color: rgb(213, 193, 175);
-  height: max-content;
-}
+  background-color: #d5c1af;
+  height: max-content; }
 
 .center {
-  grid-area: center;
-}
+  grid-area: center; }
 
 nav {
-  grid-area: nav;
-}
+  grid-area: nav; }
 
-/* HEADER */
-
-/* EMPIEZA NAV */
-.menu-list {
-  background-color: rgb(213, 193, 175);
+header nav .menu-list {
+  background-color: #d5c1af;
   padding: 0;
-  margin: 20px;
-}
+  margin: 20px; }
+  header nav .menu-list .menu-inside {
+    display: inline-block; }
+    header nav .menu-list .menu-inside li a {
+      margin: 0; }
+    header nav .menu-list .menu-inside .menu-desplegable {
+      position: relative;
+      display: block;
+      position: absolute;
+      display: none; }
+      header nav .menu-list .menu-inside .menu-desplegable li {
+        display: block; }
+        header nav .menu-list .menu-inside .menu-desplegable li:hover {
+          display: block; }
 
-.menu-inside {
-  display: inline-block;
-}
-
-nav li a {
+header nav li a {
   position: relative;
   font-family: 'Satisfy', cursive;
   list-style-type: none;
   text-decoration: none;
   color: black;
-  background-color: rgb(213, 193, 175);
+  background-color: #d5c1af;
   padding: 5px;
   margin: 5px;
   text-align: center;
   display: inline;
-  font-size: 17px;
-}
+  font-size: 17px; }
+  header nav li a:hover {
+    background-color: #af947d;
+    color: white;
+    text-shadow: 0px 1px 5px black; }
 
-.menu-inside li a{
-  margin: 0;
-}
+header .center {
+  text-align: center; }
+  header .center .portada {
+    width: 80px;
+    border-radius: 5px; }
 
-nav li a:hover {
-  background-color: rgb(175, 148, 125);
-  color: white;
-  text-shadow: 0px 1px 5px rgb(0, 0, 0, 0.30);
-}
+/*INDEX*/
+main h2 {
+  font-family: "Satisfy", cursive;
+  text-shadow: 1px 1px 1px gray; }
 
-ul ul {
-  position: absolute;
-  display: none;
-}
+main p {
+  font-family: "Oswald", sans-serif; }
 
-.menu-desplagable {
-  position: relative;
-  display: block;
-}
-
-ul ul li {
-  display: block;
-}
-
-ul li:hover ul {
-  display: block;
-}
-/* FINAL NAV */
-#hamb .menu-check {
-  display: none;
-}
-
-.center {
-  text-align: center;
-}
-
-.portada {
-  width: 80px;
-  border-radius: 5px;
-}
-
-/* MAIN */
-.titulo {
-  letter-spacing: 2px;
-}
-
-.verflyer {
+main .verflyer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
+  height: 100vh; }
+  main .verflyer .verflyerinside {
+    position: relative;
+    height: 85%;
+    width: 85%;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px; }
+    main .verflyer .verflyerinside:hover > .capa {
+      opacity: 1;
+      visibility: visible; }
+    main .verflyer .verflyerinside:hover > .capa a {
+      color: white;
+      font-weight: 500;
+      transition: all 500ms ease-out;
+      font-family: 'Oswald', sans-serif;
+      font-size: 30px;
+      text-shadow: 1px 1px 1px gray; }
+    main .verflyer .verflyerinside img {
+      width: 98%;
+      height: 96%;
+      transition: all 500ms ease-out; }
+    main .verflyer .verflyerinside .capa {
+      position: absolute;
+      top: 0;
+      width: 98%;
+      height: 96%;
+      background-color: #d5c1af;
+      transition: all 500ms ease-out;
+      opacity: 0;
+      visibility: hidden;
+      text-align: center; }
+      main .verflyer .verflyerinside .capa a {
+        text-decoration: none;
+        display: inline-block; }
 
-.verflyerinside {
-  position: relative;
-  height: 85%;
-  width: 85%;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.50);
-}
+main .cards {
+  margin: 35px; }
+  main .cards h2 {
+    font-family: "Satisfy", cursive;
+    text-align: center;
+    text-shadow: 0px 1px 5px black; }
+  main .cards p {
+    font-family: "Oswald", sans-serif; }
+  main .cards .nuevo-ingreso-card {
+    margin: 15px 15px;
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+    text-align: center;
+    border: solid #d5c1af 3px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px;
+    text-shadow: 0px 1px 10px; }
+    main .cards .nuevo-ingreso-card img {
+      text-align: center;
+      height: 70%;
+      width: 90%;
+      box-shadow: 0px 1px 5px;
+      border-radius: 6px; }
+      main .cards .nuevo-ingreso-card img:hover {
+        border: solid #ded3ca 2px;
+        border-radius: 6px;
+        transition: all 200ms ease-in-out; }
 
-.verflyerinside img {
-  width: 98%;
-  height: 96%;
-  transition: all 500ms ease-out;
-}
+/*PRODUCTOS*/
+main .cards {
+  margin: 35px; }
+  main .cards .product {
+    margin: 15px;
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+    text-align: center;
+    border: solid #d5c1af 3px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px;
+    text-shadow: 0px 1px 5px;
+    align-items: center; }
+    main .cards .product a {
+      text-decoration: none;
+      color: black; }
+      main .cards .product a img {
+        margin: 10px 0px 0px 0px;
+        text-align: center;
+        height: 70%;
+        width: 90%;
+        box-shadow: 0px 1px 5px;
+        border-radius: 6px; }
+        main .cards .product a img:hover {
+          border: solid #ded3ca 2px;
+          border-radius: 6px;
+          transition: all 200ms ease-in-out; }
 
-.verflyerinside .capa {
-  position: absolute;
-  top: 0;
-  width: 98%;
-  height: 96%;
-  background-color: rgb(213, 193, 175, 0.50);
-  transition: all 500ms ease-out;
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-}
+/*AROS-GORROS-COLLARES-PULSERAS*/
+main .cards {
+  margin: 35px; }
+  main .cards .productos {
+    margin: 15px;
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+    text-align: center;
+    border: solid #d5c1af 3px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px;
+    text-shadow: 0px 1px 5px; }
+    main .cards .productos img {
+      text-align: center;
+      height: 70%;
+      width: 90%;
+      box-shadow: 0px 1px 5px;
+      border-radius: 6px; }
+      main .cards .productos img:hover {
+        border: solid #ded3ca 2px;
+        border-radius: 6px;
+        transition: all 200ms ease-in-out; }
 
-.verflyerinside:hover>.capa {
-  opacity: 1;
-  visibility: visible;
-}
-
-.verflyerinside:hover>.capa a {
-  margin-top: 250px;
-  margin-bottom: 15px;
-}
-
-.verflyerinside .capa a {
-  color: white;
-  font-weight: 500;
-  transition: all 500ms ease-out;
-  font-family: 'Oswald', sans-serif;
-  font-size: 30px;
-  text-shadow: 1px 1px 1px gray;
-}
-
-.capa a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.cards {
-  margin: 35px;
-}
-
-.nuevo-ingreso-card {
-  margin: 15px 15px;
-  width: 250px;
-  height: 350px;
-  display: inline-block;
-  text-align: center;
-  border: solid rgb(213, 193, 175) 3px;
-  border-radius: 5px;
-  box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-  text-shadow: 0px 1px 5px rgb(0, 0, 0, 0.30);
-}
-
-.nuevo-ingreso-card img {
-  text-align: center;
-  height: 70%;
-  width: 90%;
-  box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-}
-
-.nuevo-ingreso-card .img:hover {
-  border: solid rgb(222, 211, 202) 2px;
-  border-radius: 6px;
-  transition: all 200ms ease-in-out;
-}
-
-.productos {
-  margin: 20px;
-  width: 250px;
-  height: 350px;
-  display: inline-block;
-  text-align: center;
-  border: solid rgb(213, 193, 175) 3px;
-  border-radius: 5px;
-  box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-  text-shadow: 0px 1px 5px rgb(0, 0, 0, 0.30);
-}
-
-.producto img {
-  text-align: center;
-  height: 70%;
-  width: 90%;
-  box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-}
-
-.img {
-  border-radius: 6px;
-  box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-}
-
-.producto:hover {
-  border: solid rgb(222, 211, 202) 2px;
-  border-radius: 6px;
-  transition: all 200ms ease-in-out;
-}
-
-
-.formcrearcuenta {
+/*FORM*/
+main .formcrearcuenta {
   margin-left: 20%;
-  align-items: center;
-}
+  align-items: center; }
+  main .formcrearcuenta form .fieldcampo {
+    width: 70%;
+    height: 80%;
+    border: solid #d5c1af 2px;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center; }
+  main .formcrearcuenta form .label {
+    font-family: "Oswald", sans-serif;
+    height: 5px;
+    display: flex;
+    justify-content: flex-start; }
+  main .formcrearcuenta form .boton {
+    background-color: #d5c1af;
+    border: solid #cab099 2px;
+    border-radius: 5px;
+    width: 25%;
+    height: 25%;
+    margin-top: 50px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center; }
+    main .formcrearcuenta form .boton:hover {
+      text-shadow: 1px 1px 1px gray;
+      box-shadow: 1px 1px 1px #b0afaf; }
 
-.boton {
-  background-color: rgb(213, 193, 175);
-  border: solid rgb(202, 176, 153) 2px;
-  border-radius: 5px;
-  width: 25%;
-  height: 25%;
-  margin-top: 50px;
-  margin-left: 25%;
-  display: flex;
-  justify-content: center;
-}
+/*INICIAR SESION*/
+main .acceder {
+  text-align: center; }
+  main .acceder p a {
+    text-decoration: none;
+    color: #d5c1af;
+    text-shadow: 0.5px 0.5px 0.5px #b1967d; }
 
-.boton:hover {
-  text-shadow: 1px 1px 1px gray;
-  box-shadow: 1px 1px 1px rgb(176, 175, 175);
-}
-
-.fieldcampo {
-  width: 70%;
-  height: 80%;
-  border: solid rgb(213, 193, 175) 2px;
-  border-radius: 5px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.label {
-  font-family: "Oswald";
-  height: 5px;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.nosotros {
-  background-color: rgb(213, 193, 175);
+/*NOSOTROS*/
+main .nosotros {
+  background-color: #d5c1af;
   font-size: medium;
   display: grid;
-  grid-template-areas:
-    "titulo titulo"
-    "imgnosotras nosotrasletter";
+  grid-template-areas: "titulo titulo" "imgnosotras nosotrasletter";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 60px 500px;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   align-items: center;
-  justify-items: center;
+  justify-items: center; }
+  main .nosotros .titulo {
+    grid-area: titulo;
+    font-family: "Satisfy", cursive; }
+  main .nosotros .nosotrasletter {
+    grid-area: nosotrasletter;
+    font-family: "Oswald";
+    font-size: medium;
+    text-align: center;
+    height: 40%;
+    width: 80%; }
+  main .nosotros .imgnosotras {
+    grid-area: imgnosotras;
+    width: 400px;
+    height: 400px; }
 
-}
+main .preguntas {
+  font-family: "Oswald", sans-serif;
+  line-height: normal; }
 
-.nosotros .titulo {
-  grid-area: titulo;
-}
-
-.nosotros .nosotrasletter {
-  grid-area: nosotrasletter;
-  font-family: "Oswald";
-  font-size: medium;
-  text-align: center;
-  height: 50%px;
-}
-
-.nosotros .imgnosotras {
-  grid-area: imgnosotras;
-  width: 400px;
-  height: 400px;
-}
-
-.preguntas {
-  font-family: "Oswald";
-}
-
-/* FOOTER */
 footer {
+  margin: auto;
+  height: 100%;
+  width: 100%;
   background-image: url(https://i.pinimg.com/564x/6f/60/00/6f6000a42723e342887af300b68ef6c5.jpg);
   padding: 50px;
-  background-repeat: repeat;
-}
-
-.logowhatsapp {
-  width: 50px;
-  display: inline;
-}
-
-.logodir {
-  width: 50px;
-  display: inline;
-}
-
-.logo li{
-  text-align: center;
-  list-style: none;
-  font-size: 18px;
-  display: inline;
-}
-
-.logosfooter {
-  font-size: 30px;
-  transition:ease-out 1s;
-}
-
-.logosfooter:hover{
-  transform: scale(2,2);
-}
+  background-repeat: repeat; }
+  footer .logosfooter {
+    font-size: 30px;
+    transition: ease-out 1s; }
+    footer .logosfooter:hover {
+      transform: scale(2, 2); }
+  footer .logo li {
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+    display: inline; }
+  footer .logo .logowhatsapp {
+    width: 50px;
+    display: inline; }
+  footer .logo .logodir {
+    width: 50px;
+    display: inline; }
 
 @media screen and (max-width: 900px) {
   header {
     display: flex;
     justify-content: flex-end;
-    height: max-content;
-  }
-
-  .verflyerinside {
+    height: max-content; }
+  main .verflyer .verflyerinside {
     height: 500px;
-    width: 500px;
-  }
-
-  .verflyerinside img {
-    width: 95%;
-    height: 95%;
-    transition: all 500ms ease-out;
-  }
-
-  .verflyerinside .capa {
-    width: 96%;
-    height: 95%;
-  }
-
-  .verflyerinside:hover>.capa a {
-    margin-top: 200px;
-    margin-bottom: 15px;
-  }
-
-  .productos {
+    width: 500px; }
+    main .verflyer .verflyerinside:hover > .capa a {
+      margin-top: 200px;
+      margin-bottom: 15px; }
+    main .verflyer .verflyerinside img {
+      width: 95%;
+      height: 95%;
+      transition: all 500ms ease-out; }
+    main .verflyer .verflyerinside .capa {
+      width: 96%;
+      height: 95%; }
+  main .card .productos {
     margin: 10px 10px;
     width: 300px;
     height: 400px;
     display: inline-block;
     text-align: center;
-    border: solid rgb(213, 193, 175) 3px;
+    border: solid #d5c1af 3px;
     border-radius: 5px;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-    text-shadow: 0px 1px 5px rgb(0, 0, 0, 0.30);
-  }
-
-  .producto img {
-    text-align: center;
-    height: 80%;
-    width: 100%;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-  }
-
-  .img {
-    height: 70%;
-    width: 80%;
-    margin: 10px;
-    border-radius: 6px;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-  }
-
-  .nuevo-ingreso-card {
+    box-shadow: 0px 1px 10px;
+    text-shadow: 0px 1px 5px; }
+    main .card .productos img {
+      text-align: center;
+      height: 80%;
+      width: 100%;
+      box-shadow: 0px 1px 5px; }
+  main .card .nuevo-ingreso-card {
     width: 300px;
-    height: 400px;
-  }
+    height: 400px; }
+    main .card .nuevo-ingreso-card img {
+      height: 70%;
+      width: 80%; }
+  footer .logo li {
+    display: block; } }
 
-  .nuevo-ingreso-card img {
-    height: 70%;
-    width: 80%;
-  }
-
-  .logo li{
-    display: block;
-  }
-
-}
-
-/*Media Query inicio*/
 @media screen and (max-width: 600px) {
   header {
-    background-color: rgb(213, 193, 175);
+    background-color: #d5c1af;
     width: 100%;
     margin: 0;
     display: flex;
-    justify-content: left;
-  }
-
+    justify-content: left; }
+  main .nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main .nosotros .imgnosotras {
+      width: 90%;
+      height: 90%; }
+  main .verflyer {
+    width: 100%;
+    height: 100%; }
+    main .verflyer .verflyerinside {
+      height: 100%;
+      width: 100%; }
+      main .verflyer .verflyerinside img {
+        width: 94%;
+        height: 100%;
+        transition: all 500ms ease-out; }
+      main .verflyer .verflyerinside .capa {
+        width: 94%;
+        height: 100%; }
+        main .verflyer .verflyerinside .capa a {
+          margin-top: 100px;
+          margin-bottom: 15px; }
+  main .card .productos {
+    margin: 10px 10px;
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    text-align: center;
+    border: solid #d5c1af 3px; }
+    main .card .productos img {
+      text-align: center;
+      height: 80%;
+      width: 100%;
+      box-shadow: 0px 1px 5px; }
+  main .card .nuevo-ingreso-card {
+    width: 300px;
+    height: 400px; }
+    main .card .nuevo-ingreso-card img {
+      height: 70%;
+      width: 80%; }
+  main .boton {
+    border-radius: 5px;
+    width: 30%;
+    height: 30%; }
   footer {
     grid-area: footer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: max-content;
-  }
-
-  .logo li{
-    display: block;
-  }
-
-  .nosotros {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nosotros .imgnosotras {
-    width: 300px;
-    height: 300px;
-  }
-
-  .verflyer {
-    width: 90%;
-    height: 90vh;
-  }
-
-  .verflyerinside {
-    height: 300px;
-    width: 400px;
-  }
-
-  .verflyerinside img {
-    width: 93%;
-    height: 93%;
-    transition: all 500ms ease-out;
-  }
-
-  .verflyerinside .capa {
-    width: 93%;
-    height: 93%;
-  }
-
-  .verflyerinside:hover>.capa a {
-    margin-top: 100px;
-    margin-bottom: 15px;
-  }
-
-  .productos {
-    margin: 10px 10px;
-    width: 300px;
-    height: 400px;
-    display: inline-block;
-    text-align: center;
-    border: solid rgb(213, 193, 175) 3px;
-    border-radius: 5px;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-    text-shadow: 0px 1px 5px rgb(0, 0, 0, 0.30);
-  }
-
-  .producto img {
-    text-align: center;
-    height: 80%;
-    width: 100%;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-  }
-
-  .img {
-    height: 70%;
-    width: 80%;
-    margin: 10px;
-    border-radius: 6px;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.50);
-  }
-
-  .nuevo-ingreso-card {
-    width: 300px;
-    height: 400px;
-  }
-
-  .nuevo-ingreso-card img {
-    height: 70%;
-    width: 80%;
-  }
-
-  .boton {
-    border-radius: 5px;
-    width: 30%;
-    height: 30%;
-  }
-
-}
-/*Media Query fin*/
+    height: max-content; }
+    footer .logo li {
+      display: block; } }

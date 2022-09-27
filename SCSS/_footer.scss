@@ -1,0 +1,31 @@
+footer{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/564x/6f/60/00/6f6000a42723e342887af300b68ef6c5.jpg);
+    padding: 50px;
+    background-repeat: repeat;
+    .logosfooter{
+        font-size: 30px;
+        transition: ease-out 1s;
+        &:hover{
+            transform: scale(2,2);
+        }
+    }
+    .logo{
+        li{
+            text-align: center;
+            list-style: none;
+            font-size: 18px;
+            display: inline;
+        }
+        .logowhatsapp {
+            width: 50px;
+            display: inline;
+        }
+        .logodir {
+            width: 50px;
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,205 @@
+/* VARIABLES*/
+$bordercard: solid rgb(213, 193, 175) 3px;
+$borderimg: solid rgb(222, 211, 202) 2px;
+$titulo: 'Satisfy', cursive;
+$tituloshadow: 0px 1px 5px rgb(0, 0, 0);
+$parrafo: 'Oswald', sans-serif;
+
+* {
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+body {
+    background-color: rgb(245, 234, 224);
+}
+
+/*CONTENEDOR GRID*/
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+}
+main {
+    grid-area: main;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+} 
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+}  
+header {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "center nav";
+    justify-content: space-between;
+    background-color: rgb(213, 193, 175);
+    height: max-content;
+} 
+.center {
+    grid-area: center;
+}  
+nav {
+    grid-area: nav;
+}
+
+@import "header";
+@import "main";
+@import "footer";
+
+@media screen and (max-width: 900px) {
+    header {
+        display: flex;
+        justify-content: flex-end;
+        height: max-content;
+    }
+    main{
+        .verflyer{
+            .verflyerinside {
+               height: 500px;
+               width: 500px;
+               &:hover>.capa a{
+                  margin-top: 200px;
+                  margin-bottom: 15px;
+               }
+               img{
+                   width: 95%;
+                   height: 95%;
+                   transition: all 500ms ease-out;
+                }
+                .capa {
+                    width: 96%;
+                    height: 95%;
+                } 
+            }
+        }
+        .card{
+            .productos {
+                margin: 10px 10px;
+                width: 300px;
+                height: 400px;
+                display: inline-block;
+                text-align: center;
+                border: $bordercard;
+                border-radius: 5px;
+                box-shadow: 0px 1px 10px ;
+                text-shadow: 0px 1px 5px ;
+                img{
+                    text-align: center;
+                    height: 80%;
+                    width: 100%;
+                    box-shadow: 0px 1px 5px;
+                }
+            } 
+            .nuevo-ingreso-card {
+               width: 300px;
+               height: 400px;
+               img{
+                height: 70%;
+                width: 80%;
+               }
+            } 
+        }
+    }
+    footer{
+        .logo li{
+          display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+      background-color: rgb(213, 193, 175);
+      width: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: left;
+    }
+    
+    main{
+        .nosotros {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .imgnosotras {
+                width: 90%;
+                height: 90%;
+            }
+        }
+        .verflyer {
+            width: 100%;
+            height: 100%;
+            .verflyerinside {
+                height: 100%;
+                width: 100%;
+                img {
+                 width: 94%;
+                 height: 100%;
+                 transition: all 500ms ease-out;
+                }
+                .capa {
+                    width: 94%;
+                    height: 100%;
+                    a{
+                       margin-top: 100px;
+                       margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        .card{   
+            .productos {
+                margin: 10px 10px;
+                width: 300px;
+                height: 400px;
+                display: inline-block;
+                text-align: center;
+                border: $bordercard;
+                img{
+                    text-align: center;
+                    height: 80%;
+                    width: 100%;
+                    box-shadow: 0px 1px 5px ;
+                }
+            }
+            .nuevo-ingreso-card {
+                width: 300px;
+                height: 400px;
+                img{
+                    height: 70%;
+                    width: 80%;
+                }
+            }
+        }
+        .boton {
+           border-radius: 5px;
+           width: 30%;
+           height: 30%;
+        }
+    }
+    
+    footer {
+      grid-area: footer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: max-content;
+       .logo li{
+         display: block;
+        }
+    }
+}
