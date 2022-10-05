@@ -195,14 +195,12 @@ main{
 
 /*INICIAR SESION*/ 
 main{
-    .acceder{
-        text-align: center;
-        p{
-            a{
-                text-decoration: none;
-                color: rgb(213, 193, 175);
-                text-shadow: 0.5px 0.5px 0.5px rgb(177, 150, 125);;
-            }
+    text-align: center;   
+    p{
+        a{
+            text-decoration: none;
+            color: rgb(213, 193, 175);
+            text-shadow: 0.5px 0.5px 0.5px rgb(177, 150, 125);;
         }
     }
 }
