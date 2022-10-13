@@ -1,6 +1,6 @@
 /* VARIABLES*/
 * {
-  margin: 10px;
+  margin: 0px;
   padding: 0px;
   box-sizing: border-box; }
 
@@ -42,46 +42,49 @@ header {
 nav {
   grid-area: nav; }
 
-header nav .menu-list {
-  background-color: #d5c1af;
-  padding: 0;
-  margin: 20px; }
-  header nav .menu-list .menu-inside {
-    display: inline-block; }
-    header nav .menu-list .menu-inside li a {
-      margin: 0; }
-    header nav .menu-list .menu-inside .menu-desplegable {
-      position: relative;
-      display: block;
-      position: absolute;
-      display: none; }
-      header nav .menu-list .menu-inside .menu-desplegable li {
-        display: block; }
-        header nav .menu-list .menu-inside .menu-desplegable li:hover {
+header {
+  margin: 10px;
+  padding: 10px; }
+  header nav .menu-list {
+    background-color: #d5c1af;
+    padding: 0;
+    margin: 20px; }
+    header nav .menu-list .menu-inside {
+      display: inline-block; }
+      header nav .menu-list .menu-inside li a {
+        margin: 0;
+        align-content: center; }
+      header nav .menu-list .menu-inside .menu-desplegable {
+        position: relative;
+        display: block;
+        position: absolute;
+        display: none; }
+        header nav .menu-list .menu-inside .menu-desplegable li {
           display: block; }
-
-header nav li a {
-  position: relative;
-  font-family: 'Satisfy', cursive;
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-  background-color: #d5c1af;
-  padding: 5px;
-  margin: 5px;
-  text-align: center;
-  display: inline;
-  font-size: 17px; }
-  header nav li a:hover {
-    background-color: #af947d;
-    color: white;
-    text-shadow: 0px 1px 5px black; }
-
-header .center {
-  text-align: center; }
-  header .center .portada {
-    width: 80px;
-    border-radius: 5px; }
+          header nav .menu-list .menu-inside .menu-desplegable li:hover {
+            display: block; }
+  header nav li a {
+    position: relative;
+    font-family: 'Satisfy', cursive;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    background-color: #d5c1af;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    display: inline;
+    font-size: 17px; }
+    header nav li a:hover {
+      background-color: #af947d;
+      border-radius: 5px;
+      color: white;
+      padding: 5px; }
+  header .center {
+    text-align: center; }
+    header .center .portada {
+      width: 80px;
+      border-radius: 5px; }
 
 /*INDEX*/
 main h2 {
@@ -105,9 +108,11 @@ main .verflyer {
     border-radius: 6px;
     box-shadow: 0px 1px 10px; }
     main .verflyer .verflyerinside:hover > .capa {
+      margin: 10px;
       opacity: 1;
       visibility: visible; }
     main .verflyer .verflyerinside:hover > .capa a {
+      margin: 10px;
       color: white;
       font-weight: 500;
       transition: all 500ms ease-out;
@@ -115,10 +120,12 @@ main .verflyer {
       font-size: 30px;
       text-shadow: 1px 1px 1px gray; }
     main .verflyer .verflyerinside img {
+      margin: 10px;
       width: 98%;
       height: 96%;
       transition: all 500ms ease-out; }
     main .verflyer .verflyerinside .capa {
+      margin: 10px;
       position: absolute;
       top: 0;
       width: 98%;
@@ -130,7 +137,8 @@ main .verflyer {
       text-align: center; }
       main .verflyer .verflyerinside .capa a {
         text-decoration: none;
-        display: inline-block; }
+        display: inline-block;
+        align-content: center; }
 
 main .cards {
   margin: 35px; }
@@ -141,7 +149,7 @@ main .cards {
   main .cards p {
     font-family: "Oswald", sans-serif; }
   main .cards .nuevo-ingreso-card {
-    margin: 15px 15px;
+    margin: 20px 20px;
     width: 250px;
     height: 350px;
     display: inline-block;
@@ -151,6 +159,7 @@ main .cards {
     box-shadow: 0px 1px 10px;
     text-shadow: 0px 1px 10px; }
     main .cards .nuevo-ingreso-card img {
+      margin: 10px;
       text-align: center;
       height: 70%;
       width: 90%;
@@ -168,18 +177,18 @@ main .cards {
     margin: 15px;
     width: 250px;
     height: 350px;
-    display: inline-block;
-    text-align: center;
     border: solid #d5c1af 3px;
     border-radius: 5px;
     box-shadow: 0px 1px 10px;
+    margin: 20px 20px;
+    display: inline-block;
     text-shadow: 0px 1px 5px;
     align-items: center; }
     main .cards .product a {
       text-decoration: none;
       color: black; }
       main .cards .product a img {
-        margin: 10px 0px 0px 0px;
+        margin: 10px;
         text-align: center;
         height: 70%;
         width: 90%;
@@ -197,18 +206,19 @@ main .cards {
     margin: 15px;
     width: 250px;
     height: 350px;
-    display: inline-block;
-    text-align: center;
     border: solid #d5c1af 3px;
     border-radius: 5px;
     box-shadow: 0px 1px 10px;
-    text-shadow: 0px 1px 5px; }
+    display: inline-block;
+    text-shadow: 0px 1px 5px;
+    margin: 20px; }
     main .cards .productos img {
       text-align: center;
       height: 70%;
       width: 90%;
       box-shadow: 0px 1px 5px;
-      border-radius: 6px; }
+      border-radius: 6px;
+      margin: 10px; }
       main .cards .productos img:hover {
         border: solid #ded3ca 2px;
         border-radius: 6px;
@@ -227,6 +237,7 @@ main .formcrearcuenta {
     display: flex;
     justify-content: center; }
   main .formcrearcuenta form .label {
+    padding: 5px;
     font-family: "Oswald", sans-serif;
     height: 5px;
     display: flex;
@@ -246,9 +257,9 @@ main .formcrearcuenta {
       box-shadow: 1px 1px 1px #b0afaf; }
 
 /*INICIAR SESION*/
-main .acceder {
+main {
   text-align: center; }
-  main .acceder p a {
+  main p a {
     text-decoration: none;
     color: #d5c1af;
     text-shadow: 0.5px 0.5px 0.5px #b1967d; }
@@ -284,6 +295,13 @@ main .preguntas {
   font-family: "Oswald", sans-serif;
   line-height: normal; }
 
+/*PREGUNTAS*/
+main .preguntas h4 {
+  padding: 2px; }
+
+main .preguntas p {
+  padding: 5px; }
+
 footer {
   margin: auto;
   height: 100%;
@@ -292,21 +310,27 @@ footer {
   padding: 50px;
   background-repeat: repeat; }
   footer .logosfooter {
+    padding: 10px;
     font-size: 30px;
     transition: ease-out 1s; }
     footer .logosfooter:hover {
       transform: scale(2, 2); }
+    footer .logosfooter a {
+      padding: 5px; }
   footer .logo li {
+    padding: 10px;
     text-align: center;
     list-style: none;
     font-size: 18px;
     display: inline; }
+    footer .logo li i {
+      padding: 10px; }
   footer .logo .logowhatsapp {
     width: 50px;
-    display: inline; }
+    display: inline-block; }
   footer .logo .logodir {
     width: 50px;
-    display: inline; }
+    display: inline-block; }
 
 @media screen and (max-width: 900px) {
   header {
@@ -348,6 +372,7 @@ footer {
       height: 70%;
       width: 80%; }
   footer .logo li {
+    padding: 5px;
     display: block; } }
 
 @media screen and (max-width: 600px) {

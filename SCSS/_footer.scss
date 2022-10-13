@@ -6,26 +6,34 @@ footer{
     padding: 50px;
     background-repeat: repeat;
     .logosfooter{
+        padding: 10px;
         font-size: 30px;
         transition: ease-out 1s;
         &:hover{
             transform: scale(2,2);
         }
+        a{
+            padding: 5px;
+        }
     }
     .logo{
         li{
+            padding: 10px;
             text-align: center;
             list-style: none;
             font-size: 18px;
             display: inline;
+            i{
+                padding: 10px;
+            }
         }
         .logowhatsapp {
             width: 50px;
-            display: inline;
+            display: inline-block;
         }
         .logodir {
             width: 50px;
-            display: inline;
+            display: inline-block;
         }
     }
 }
