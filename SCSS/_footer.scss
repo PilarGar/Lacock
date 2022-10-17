@@ -9,11 +9,14 @@ footer{
         padding: 10px;
         font-size: 30px;
         transition: ease-out 1s;
+        text-decoration: none;
         &:hover{
             transform: scale(2,2);
+            text-decoration: none;
         }
         a{
             padding: 5px;
+            text-decoration: none;
         }
     }
     .logo{

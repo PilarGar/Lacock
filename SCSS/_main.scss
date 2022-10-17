@@ -145,6 +145,7 @@ main{
             display: inline-block;
             text-shadow: 0px 1px 5px ;
             margin: 20px;
+            height: 350px;
             img{
                 text-align: center;
                 height: 70%;
@@ -157,6 +158,21 @@ main{
                 border-radius: 6px;
                 transition: all 200ms ease-in-out;
             }
+            }
+            p{
+                margin: 0px;
+            }
+            .btn{
+                padding: 3px;
+                margin: 1px;
+                background-color: rgb(213, 193, 175);
+                border: $borderimg;
+                color: black;
+                text-align: center;
+                font-family: $parrafo;
+                &:hover{
+                    color: white;
+                }
             }
         }
     }
@@ -171,7 +187,7 @@ main{
                 .fieldcampo {
                     width: 70%;
                     height: 80%;
-                    border: solid rgb(213, 193, 175) 2px;
+                    border: solid $bordercard 2px;
                     border-radius: 5px;
                     padding: 5px;
                     display: flex;

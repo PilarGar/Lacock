@@ -45,6 +45,8 @@ nav {
 header {
   margin: 10px;
   padding: 10px; }
+  header div .breadcrumb {
+    color: white; }
   header nav .menu-list {
     background-color: #d5c1af;
     padding: 0;
@@ -211,7 +213,8 @@ main .cards {
     box-shadow: 0px 1px 10px;
     display: inline-block;
     text-shadow: 0px 1px 5px;
-    margin: 20px; }
+    margin: 20px;
+    height: 350px; }
     main .cards .productos img {
       text-align: center;
       height: 70%;
@@ -223,6 +226,18 @@ main .cards {
         border: solid #ded3ca 2px;
         border-radius: 6px;
         transition: all 200ms ease-in-out; }
+    main .cards .productos p {
+      margin: 0px; }
+    main .cards .productos .btn {
+      padding: 3px;
+      margin: 1px;
+      background-color: #d5c1af;
+      border: solid #ded3ca 2px;
+      color: black;
+      text-align: center;
+      font-family: "Oswald", sans-serif; }
+      main .cards .productos .btn:hover {
+        color: white; }
 
 /*FORM*/
 main .formcrearcuenta {
@@ -231,7 +246,7 @@ main .formcrearcuenta {
   main .formcrearcuenta form .fieldcampo {
     width: 70%;
     height: 80%;
-    border: solid #d5c1af 2px;
+    border: solid solid #d5c1af 3px 2px;
     border-radius: 5px;
     padding: 5px;
     display: flex;
@@ -312,11 +327,14 @@ footer {
   footer .logosfooter {
     padding: 10px;
     font-size: 30px;
-    transition: ease-out 1s; }
+    transition: ease-out 1s;
+    text-decoration: none; }
     footer .logosfooter:hover {
-      transform: scale(2, 2); }
+      transform: scale(2, 2);
+      text-decoration: none; }
     footer .logosfooter a {
-      padding: 5px; }
+      padding: 5px;
+      text-decoration: none; }
   footer .logo li {
     padding: 10px;
     text-align: center;
@@ -371,6 +389,30 @@ footer {
     main .card .nuevo-ingreso-card img {
       height: 70%;
       width: 80%; }
+  main .nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main .nosotros .imgnosotras {
+      width: 90%;
+      height: 90%; }
+  main .verflyer {
+    width: 100%;
+    height: 100%; }
+    main .verflyer .verflyerinside {
+      height: 100%;
+      width: 100%; }
+      main .verflyer .verflyerinside img {
+        width: 94%;
+        height: 100%;
+        transition: all 500ms ease-out; }
+      main .verflyer .verflyerinside .capa {
+        width: 94%;
+        height: 100%; }
+        main .verflyer .verflyerinside .capa a {
+          margin-top: 100px;
+          margin-bottom: 15px; }
   footer .logo li {
     padding: 5px;
     display: block; } }
